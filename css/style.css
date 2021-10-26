@@ -1,0 +1,121 @@
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
+
+:root{
+    --background:rgb(27, 27, 27);
+    --default:rgb(133, 45, 45);
+}
+
+
+
+body{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:rgb(15, 15, 15);
+    color:white;
+}
+
+#player{
+    background-color:var(--background);
+    border-radius: 10px;
+    width:90%;
+    max-width: 550px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card{
+    box-shadow:none;
+    margin:0;
+    border-radius: 10px;
+    background-color:var(--background);
+}
+h4{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight: bold;
+    font-size:20px;
+    padding: 12px;
+}
+p,span{
+    color:rgb(158, 45, 45);
+}
+.card-image{
+    
+    height:320px;
+}
+#play-pause{
+    background-color:var(--default);
+}
+
+#mute{
+    color:var(--default);
+    transform: translateY(2px);
+}
+input[type="range"]::-webkit-slider-thumb{
+    background-color:var(--default);
+}
+input[type="range"]::-moz-range-thumb{
+    background-color:var(--default);
+}
+input[type="range"]::-ms-thumb{
+    background-color:var(--default);
+}
+.duration{
+    width:100%;
+    display:inline-grid;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    grid-row: 1;
+}
+#seekbar{
+    width: 250px;       
+}
+#total-duration,#current-duration{
+    margin:0;
+    margin-top: 6px;
+}
+#controls{
+    display: flex;
+    width:100%;
+    justify-content:center; 
+}
+#controls  img{
+   
+    display:inline;
+}
+svg{
+    color:white;
+}
+#play-pause{
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    
+}
+#pause{
+    display:none;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    
+}
+#next{
+    width: 55px;
+    height:60px;
+    margin-top:4px;
+}
+#previous{
+    width:40px;
+    height:43px;
+    margin-top:12px;
+    margin-right: 5px;
+}
+#controls img:hover{
+    cursor: pointer;
+    opacity:0.7;
+}
