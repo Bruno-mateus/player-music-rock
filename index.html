@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Player Songs</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="player">
-        <h4><i class="material-icons">equalizer</i> Player <span>Songs</span></h4>
-        <div class="card">
-            <div class="card-image">
+      <h4><i class="material-icons">equalizer</i> Player <span>Songs</span></h4>
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="card-content">
+          <h5 class="title">Title</h5>
+          <p class="artist">Artist</p>
 
+          <div class="row valign-wrapper">
+            <div class="duration">
+              <div class="col s2" id="current-duration">00:00</div>
+              <input
+                id="seekbar"
+                type="range"
+                min="0"
+                max="0"
+                value="0"
+                step="1"
+              />
+              <div class="col s2" id="total-duration">00:00</div>
             </div>
-            <div class="card-content">
-                <h5 class="title">Title</h5>
-                <p class="artist">Artist</p>
-                
-                <div class="row valign-wrapper">
-                        <div class="duration">
-                        <div class="col s2" id="current-duration">00:00</div>
-                        <input id="seekbar" type="range" min="0" max="0" value="0" step="1">
-                        <div class="col s2" id="total-duration">00:00</div>
-                        </div>
-                        <a href="#">
-                            <i class="material-icons" id="mute">volume_up</i>
-                        </a>
-                        <div class="col s3 range-field valign-wrapper">
-                        <input type="range" min="0" max="100" id="vol-control" step="0">
-                        </div>
-                </div>
-                <div id="controls">
-                    <img src="./img/skip_previous_black_24dp.svg" alt="previous" id="previous">
-                    <img src="./img/play_arrow_black_24dp.svg" alt="play" id="play-pause">
-                   
-                    <img src="./img/skip_next_black_24dp.svg" alt="next" id="next">
-                </div>
+            <a class="vol" href="#">
+              <i class="material-icons" id="mute">volume_up</i>
+            </a>
+            <div class="col s3 range-field valign-wrapper">
+              <input type="range" min="0" max="100" id="vol-control" step="0" />
             </div>
+          </div>
+          <div id="controls">
+            <img
+              src="./img/skip_previous_black_24dp.svg"
+              alt="previous"
+              id="previous"
+            />
+            <img
+              src="./img/play_arrow_black_24dp.svg"
+              alt="play"
+              id="play-pause"
+            />
+
+            <img src="./img/skip_next_black_24dp.svg" alt="next" id="next" />
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="scripts/main.js" type="module"></script>
-</body>
+  </body>
 </html>
